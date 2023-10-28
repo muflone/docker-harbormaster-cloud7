@@ -1,6 +1,5 @@
  services:
    main:
-     container_name: hello_world
      build: .
      ports:
        - "8000:8000"
