@@ -11,3 +11,10 @@ apps:
     enabled: false
     compose_config:
       - apps/portainer_agent/docker-compose.yaml
+
+  certbot:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: false
+    compose_config:
+      - apps/certbot/docker-compose.yaml

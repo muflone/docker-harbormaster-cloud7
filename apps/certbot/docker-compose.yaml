@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  certbot:
+    image: certbot/certbot:v2.5.0
+    restart: 'no'
+    networks:
+      - default
+    ports:
+      - 80:80/tcp
+    volumes:
+      - ${HM_DATA_DIR}/letsencrypt:/etc/letsencrypt
+      - ${HM_DATA_DIR}/certbot:/var/lib/letsencrypt
+    entrypoint:
+      - certbot
+      - certonly
+      - --standalone
+      - --preferred-challenges
+      - http
+      - --expand
+      - -d
+      - muflone.com
+      - -d
+      - www.muflone.com
+      - -d
+      - archlinux.muflone.com
+      - -d
+      - nextcloud.muflone.com
+      - -d
+      - paste.muflone.com
+      - -d
+      - url.muflone.com
+      - -d
+      - repositories.muflone.com
+      - -d
+      - vbsimple.muflone.com
+      - -d
+      - vbsimple.net
+      - -d
+      - www.vbsimple.net
+      - --email=webreg@muflone.com
+      - --agree-tos
+      - --no-eff-email
+#      - --dry-run
+#    entrypoint:
+#      - certbot
+#      - renew
+#      - --dry-run
+
+networks:
+  default:
+    name: certbot
+    driver: bridge
+    enable_ipv6: false
