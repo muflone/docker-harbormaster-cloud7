@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  harbormaster:
+    container_name: harbormaster
+    image: stavros/harbormaster:0.3.4
+    restart: 'no'
+    networks:
+      - default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/config
+      - ./data:/main
+
+networks:
+  default:
+    name: harbormaster
+    driver: bridge
+    enable_ipv6: false
+
