@@ -8,5 +8,6 @@ apps:
   portainer:
     url: https://github.com/muflone/harbormaster-cloud7.git
     branch: main
+    enabled: false
     compose_config:
       - apps/portainer/docker-compose.yaml
