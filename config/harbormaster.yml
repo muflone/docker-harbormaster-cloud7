@@ -5,3 +5,8 @@ apps:
     compose_config:
       - apps/hello_world/docker-compose.yml
 
+  portainer:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    compose_config:
+      - apps/portainer/docker-compose.yml
