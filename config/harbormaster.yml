@@ -5,7 +5,7 @@ apps:
     compose_config:
       - apps/hello_world/docker-compose.yaml
 
-  portainer:
+  portainer_agent:
     url: https://github.com/muflone/harbormaster-cloud7.git
     branch: main
     enabled: false
