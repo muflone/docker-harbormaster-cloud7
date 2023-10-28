@@ -11,10 +11,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./config:/config
       - ./data:/main
+      - ./crontab:/var/spool/cron/crontabs/root:ro
 
 networks:
   default:
     name: harbormaster
     driver: bridge
     enable_ipv6: false
-
