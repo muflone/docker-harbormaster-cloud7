@@ -10,4 +10,4 @@ apps:
     branch: main
     enabled: false
     compose_config:
-      - apps/portainer/docker-compose.yaml
+      - apps/portainer_agent/docker-compose.yaml
