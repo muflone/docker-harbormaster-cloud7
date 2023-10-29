@@ -1,1 +1,2 @@
 apps/nginx/dhparam.pem filter=git-crypt diff=git-crypt
+apps/mysql/app.env filter=git-crypt diff=git-crypt
