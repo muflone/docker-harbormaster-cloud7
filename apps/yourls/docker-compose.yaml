@@ -1,0 +1,15 @@
+services:
+  yourls:
+    image: yourls:1.9.2-apache
+    user: www-data:www-data
+    restart: unless-stopped
+    networks:
+      - web
+    env_file:
+      - ${HM_DATA_DIR}/app.env
+    volumes:
+      - ./index.php:/var/www/html/index.php
+
+networks:
+  web:
+    external: true

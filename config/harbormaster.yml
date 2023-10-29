@@ -40,3 +40,10 @@ apps:
     enabled: true
     compose_config:
       - apps/pastey/docker-compose.yaml
+
+  yourls:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: true
+    compose_config:
+      - apps/yourls/docker-compose.yaml
