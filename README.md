@@ -6,7 +6,7 @@ Docker containers
 
 **License:** GPL-3+
 
-**Source code:** https://github.com/muflone/harbormaster-cloud7
+**Source code:** https://github.com/muflone/docker-harbormaster-cloud7
 
 System Requirements
 -------------------
@@ -20,4 +20,3 @@ Installation
 Build the container using Docker compose with:
 
     docker-compose up -d
-
