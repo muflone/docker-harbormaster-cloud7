@@ -47,3 +47,10 @@ apps:
     enabled: true
     compose_config:
       - apps/yourls/docker-compose.yaml
+
+  nextcloud:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: true
+    compose_config:
+      - apps/nextcloud/docker-compose.yaml
