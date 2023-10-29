@@ -2,6 +2,7 @@ apps:
   hello_world:
     url: https://github.com/muflone/harbormaster-cloud7.git
     branch: main
+    enabled: true
     compose_config:
       - apps/hello_world/docker-compose.yaml
 
@@ -18,3 +19,10 @@ apps:
     enabled: false
     compose_config:
       - apps/certbot/docker-compose.yaml
+
+  nginx:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: true
+    compose_config:
+      - apps/nginx/docker-compose.yaml
