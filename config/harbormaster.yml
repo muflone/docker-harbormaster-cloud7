@@ -26,3 +26,10 @@ apps:
     enabled: true
     compose_config:
       - apps/nginx/docker-compose.yaml
+
+  mysql:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: true
+    compose_config:
+      - apps/mysql/docker-compose.yaml

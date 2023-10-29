@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  database:
+    image: mariadb:10.5.9
+    restart: unless-stopped
+    networks:
+      - web
+    env_file:
+      - ./app.env
+    volumes:
+      - ./mysql-innodb_file_per_table.cnf:/etc/mysql/conf.d/mysql-innodb_file_per_table.cnf:ro
+      - ./mysql-max_allowed_packet.cnf:/etc/mysql/conf.d/mysql-max_allowed_packet.cnf:ro
+      - ${HM_DATA_DIR}/data:/var/lib/mysql
+
+networks:
+  web:
+    external: true
