@@ -15,6 +15,6 @@ apps:
   certbot:
     url: https://github.com/muflone/harbormaster-cloud7.git
     branch: main
-    enabled: false
+    enabled: true
     compose_config:
       - apps/certbot/docker-compose.yaml
