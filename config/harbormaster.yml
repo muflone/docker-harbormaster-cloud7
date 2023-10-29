@@ -2,7 +2,7 @@ apps:
   hello_world:
     url: https://github.com/muflone/harbormaster-cloud7.git
     branch: main
-    enabled: true
+    enabled: false
     compose_config:
       - apps/hello_world/docker-compose.yaml
 
