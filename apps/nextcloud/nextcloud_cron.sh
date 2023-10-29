@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker-compose -u 33 nextcloud  php cron.php
+docker-compose exec -u 33 nextcloud  php cron.php
