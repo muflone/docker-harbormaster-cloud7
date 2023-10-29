@@ -1,0 +1,16 @@
+services:
+  pastey:
+    image: cesura/pastey:0.5.1-slim
+    container_name: pastey
+    user: nobody:nogroup
+    restart: unless-stopped
+    networks:
+      - web
+    env_file:
+      - ./app.env
+    volumes:
+      - ${HM_DATA_DIR}/data:/app/data
+
+networks:
+  web:
+    external: true

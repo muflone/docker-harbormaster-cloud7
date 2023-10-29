@@ -33,3 +33,10 @@ apps:
     enabled: true
     compose_config:
       - apps/mysql/docker-compose.yaml
+
+  pastey:
+    url: https://github.com/muflone/harbormaster-cloud7.git
+    branch: main
+    enabled: true
+    compose_config:
+      - apps/pastey/docker-compose.yaml
